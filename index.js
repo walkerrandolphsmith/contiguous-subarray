@@ -6,7 +6,7 @@ export default (sequence) => {
 }
 
 const getMaxNegative = (sequence) => {
-    const max = sequence.reduce((max, next) => Math.min(Math.abs(next), max), sequence[0] * -1) * -1;
+    const max = Math.max(...sequence);
     return { max: max, maxSequence: [max] };
 };
 
